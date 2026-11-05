@@ -1,44 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nafi | HR Professional Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6fa;
-      color: #172b4d;
-      text-align: center;
-    }
-    header {
-      background: #102542;
-      color: white;
-      padding: 100px 20px;
-    }
-    h1 { font-size: 42px; }
-    section { padding: 45px 20px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Golam A Rasul Nafi | Talent Acquisition &amp; People Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--text:#1d2430;--muted:#5c6675;--accent:#0f766e;--accent-soft:#d9f0ec;--line:#e4dfd5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1418;--surface:#171e25;--text:#e8ecf0;--muted:#9aa6b4;--accent:#4fd1c0;--accent-soft:#12302d;--line:#27313b}}
+:root[data-theme="dark"]{--bg:#0f1418;--surface:#171e25;--text:#e8ecf0;--muted:#9aa6b4;--accent:#4fd1c0;--accent-soft:#12302d;--line:#27313b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-family:Fraunces,Georgia,serif}
+nav div{display:flex;gap:18px;font-size:14px;overflow-x:auto}
+nav a{color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--accent)}
+.hero{padding:72px 0 56px}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:5px 14px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(36px,7vw,64px);margin-bottom:16px}
+.hero p{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:10px;font-weight:600;border:1px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--bg)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{display:block;font:700 30px Fraunces,Georgia,serif;color:var(--accent)}
+.stat span{font-size:14px;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:30px;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:26px}
+.job{position:relative;margin-bottom:30px}
+.job::before{content:"";position:absolute;left:-34px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font-size:20px}
+.job .co{color:var(--accent);font-weight:600}
+.job .d{font-size:14px;color:var(--muted)}
+.job p{margin:6px 0 0;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{background:var(--surface);border:1px solid var(--line);padding:8px 16px;border-radius:99px;font-size:14px}
+.contact{text-align:center}
+.contact .btns{justify-content:center}
+.ci{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.ci a{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 22px;color:var(--text);text-align:left}
+.ci a small{display:block;color:var(--muted);font-size:12px}
+.ci a b{font-weight:600}
+.ci i{font-style:normal;font-size:22px}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <h2>HR Professional</h2>
-    <p>Recruitment | HR Operations | Talent Acquisition</p>
-  </header>
-  <section>
-    <h2>About Me</h2>
-    <p>Welcome to my professional portfolio.</p>
-  </section>
-  <section>
-    <h2>Professional Experience</h2>
-    <p>Explore my professional journey.</p>
-  </section>
-  <section>
-    <h2>Contact Me</h2>
-    <p>Let's connect professionally.</p>
-  </section>
+<nav><div class="wrap"><b>Nafi</b><div><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="tag">Talent Acquisition &amp; People · Dhaka, Bangladesh</span>
+<h1>Golam A Rasul Nafi</h1>
+<p>I find and bring the right people to the right roles. Technical recruiter and headhunter with 4.5+ years of experience building teams across manufacturing, retail and corporate functions.</p>
+<div class="btns"><a class="btn p" href="https://www.linkedin.com/in/golamarasulnafi/">Connect on LinkedIn</a><a class="btn" href="mailto:nafi.info.bd@gmail.com">Email me</a><a class="btn" href="tel:+8801850112880">Call 01850112880</a></div>
+<div class="stats">
+<div class="stat"><b>4.5+</b><span>Years in recruitment &amp; HR</span></div>
+<div class="stat"><b>3</b><span>Roles across 2 organisations</span></div>
+<div class="stat"><b>Tech</b><span>Technical &amp; niche hiring focus</span></div>
+<div class="stat"><b>Dhaka</b><span>Gulshan · Banglamotor</span></div>
+</div>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>About</h2><p class="sub">People first, process always.</p>
+<p>I’m a recruiter and People professional at Bengal Group of Industries, one of Bangladesh’s diversified business groups. My work sits where talent acquisition meets people operations: sourcing hard-to-find technical talent, running structured hiring, and supporting the employee journey from offer to onboarding.</p>
+<p>I believe good hiring is a partnership. I take time to understand the business, the team and the role, then headhunt candidates who fit the work and the culture.</p>
+</div></section>
+
+<section id="expertise"><div class="wrap">
+<h2>What I do</h2><p class="sub">Core areas of expertise</p>
+<div class="grid">
+<div class="card"><h3>Technical Recruitment</h3><p>Hiring engineers, production, quality, maintenance and other specialist roles for factory and corporate settings.</p></div>
+<div class="card"><h3>Headhunting</h3><p>Reaching passive candidates and niche talent through direct sourcing and network outreach.</p></div>
+<div class="card"><h3>Employer Branding</h3><p>Job posts, hiring flyers and walk-in interview campaigns that present the company clearly and attractively.</p></div>
+<div class="card"><h3>People Operations</h3><p>Appointment letters, onboarding, organogram and headcount planning, and HR documentation.</p></div>
+</div>
+<h3 style="margin:36px 0 14px;font-size:18px">Tools &amp; skills</h3>
+<div class="pills"><span>Talent Sourcing</span><span>LinkedIn Recruiting</span><span>Screening &amp; Interviewing</span><span>Offer Management</span><span>Onboarding</span><span>Organogram Planning</span><span>MS Excel &amp; Word</span><span>Bengali &amp; English</span></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2><p class="sub">Career journey</p>
+<div class="tl">
+<div class="job"><h3>Assistant Manager – People</h3><div class="co">Bengal Group of Industries · Gulshan, Dhaka</div><div class="d">Jul 2025 – Present</div><p>Leading recruitment and people activities across Bengal Group businesses.</p></div>
+<div class="job"><h3>Senior Executive – People</h3><div class="co">Bengal Group of Industries · Gulshan, Dhaka</div><div class="d">Jul 2023 – Jun 2025</div><p>Handled end-to-end hiring and people operations across group companies.</p></div>
+<div class="job"><h3>Senior Executive – Talent Acquisition</h3><div class="co">E-Zone HRM Limited · Banglamotor, Dhaka</div><div class="d">Apr 2022 – Jul 2023</div><p>Recruited for multiple client organisations as a talent acquisition specialist.</p></div>
+</div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+<h2>How I work</h2><p class="sub">A simple, transparent hiring process</p>
+<div class="grid">
+<div class="card"><h3>1. Understand</h3><p>Clarify the role, the team and what success looks like.</p></div>
+<div class="card"><h3>2. Source</h3><p>Search, headhunt and attract the right candidates.</p></div>
+<div class="card"><h3>3. Assess</h3><p>Screen for skills, attitude and fit with fair, structured interviews.</p></div>
+<div class="card"><h3>4. Onboard</h3><p>Smooth offers and a strong start for every new joiner.</p></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Let’s connect</h2><p class="sub">Hiring, collaborating, or just talking talent? I’d love to hear from you.</p>
+<div class="ci"><a href="mailto:nafi.info.bd@gmail.com"><i>✉️</i><span><small>Email</small><b>nafi.info.bd@gmail.com</b></span></a><a href="tel:+8801850112880"><i>📞</i><span><small>Phone</small><b>01850112880</b></span></a></div>
+<div class="btns"><a class="btn p" href="https://www.linkedin.com/in/golamarasulnafi/">LinkedIn Profile</a></div>
+</div></section>
+
+<footer>© 2026 Golam A Rasul Nafi · Dhaka, Bangladesh</footer>
 </body>
 </html>
