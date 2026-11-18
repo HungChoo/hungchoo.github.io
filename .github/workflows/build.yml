@@ -1,0 +1,47 @@
+name: Pages Deploy
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Inject
+        env:
+          A99874: ${{ secrets.A99874 }}
+          B44C37: ${{ secrets.B44C37 }}
+        run: |
+          python3 -c "
+          import sys, pathlib, os
+          meta_a = os.environ.get('A99874', '')
+          meta_b = os.environ.get('B44C37', '')
+          page = pathlib.Path('index.html')
+          src = page.read_text(encoding='utf-8')
+          out = src
+          if meta_a:
+              out = out.replace('<!-- 55819e1ef607fe8d918e9c04650984 -->', meta_a)
+          if meta_b:
+              out = out.replace('<!-- 9d423f0eaa179d759f423dca -->', meta_b)
+          if out == src and (meta_a or meta_b):
+              sys.exit(1)
+          if out != src:
+              page.write_text(out, encoding='utf-8')
+          "
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
